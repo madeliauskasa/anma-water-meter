@@ -1,0 +1,61 @@
+esphome:
+  name: water-meter
+  friendly_name: Water Meter
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+logger:
+
+api:
+  encryption:
+    key: "" ## Add your own encryption key
+
+ota:
+  - platform: esphome
+    password: "" ## Add your own pass
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  ap:
+    ssid: "Water-Meter Fallback Hotspot"
+    password: "" ## Add your own pass
+
+sensor:
+  - platform: pulse_counter
+    pin: 
+      number: GPIO12
+      mode: INPUT
+      inverted: true
+    name: "Internal Water Flow Rate"
+    unit_of_measurement: "L/min"
+    icon: "mdi:water-sync"
+    use_pcnt: false
+    internal_filter: 200ms
+    update_interval: 10s
+    total:
+      device_class: water
+      name: "Internal Water Pulses"
+      unit_of_measurement: "L"
+      icon: "mdi:water-outline"
+
+  - platform: pulse_counter
+    pin: 
+      number: GPIO14
+      mode: INPUT
+      inverted: true
+    name: "External Water Flow Rate"
+    unit_of_measurement: "L/min"
+    icon: "mdi:water-sync"
+    use_pcnt: false
+    internal_filter: 200ms
+    update_interval: 10s
+    total:
+      device_class: water
+      name: "External Water Pulses"
+      unit_of_measurement: "L"
+      icon: "mdi:water-outline"

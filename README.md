@@ -1,3 +1,7 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/madeliauskasa/anma-water-meter/blob/main/README.md)
+[![en](https://img.shields.io/badge/lang-lt-green.svg)](https://github.com/madeliauskasa/anma-water-meter/blob/main/README.lt.md)
+
+
 # ANMA water meter
 ### Dual Water Meter & Leak Detection sensor tracker
 

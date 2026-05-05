@@ -8,6 +8,16 @@
 
 ---
 
+## 📋 Reikalavimai
+
+Prieš pradedant įsitikinkite, kad turite:
+*   **Home Assistant serverį:** Veikiantį Home Assistant egzempliorių (OS, Supervised arba Core).
+*   **WiFi ryšį:** Stabilų 2,4 GHz WiFi signalą montavimo vietoje.
+*   **Maitinimą:** USB Type-C laidą ir 5V DC maitinimo adapterį (bent 1A).
+*   **Suderinamą skaitiklį:** B-Meters GSD8 arba analogišką skaitiklį, turintį besisukantį metalinį elementą (indukcinio jutiklio taikinį).
+
+---
+
 ## 🛠 Aparatinės įrangos apžvalga
 
 *   **M1 jungtis:** 1-ojo skaitiklio jungtis (SN04-N NPN artumo jutiklis)

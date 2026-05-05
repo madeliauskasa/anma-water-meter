@@ -9,6 +9,16 @@ ANMA water meter is an ESP32-powered utility monitor designed to integrate non-s
 
 ---
 
+## 📋 Requirements
+
+Before installation, ensure you have:
+*   **Home Assistant Server:** A running instance of Home Assistant (Core, OS, or Supervised).
+*   **WiFi Connectivity:** Stable 2.4GHz WiFi signal at the installation site.
+*   **Power Supply:** A USB Type-C cable and 5V DC power adapter (min. 1A).
+*   **Compatible Water Meter:** B-Meters GSD8 or a comparable utility meter equipped with a spinning metal indicator (target for the inductive sensor).
+
+---
+
 ## 🛠 Hardware Overview
 
 *   **M1 Port:** Meter 1 Connection (SN04-N NPN Proximity Sensor)

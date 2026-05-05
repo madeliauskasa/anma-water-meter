@@ -1,0 +1,86 @@
+esphome:
+  name: water-meter-gen2
+  friendly_name: Water Meter Gen2
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "" ## Add your own encryption key
+
+ota:
+  - platform: esphome
+    password: "" ## Add your own pass
+  - platform: web_server
+
+wifi:
+  # This creates a hotspot if connection fails
+  ap:
+    ssid: "Water-Meter-Setup"
+    # password: "password123"
+
+web_server:
+  port: 80
+  version: 3
+
+# This is the "web page" for first-time Wi-Fi setup
+captive_portal:
+
+sensor:
+  # Water Meter 1 (on GPIO 19)
+  - platform: pulse_counter
+    pin: 
+      number: GPIO19
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "M1 Water Flow Rate"
+    unit_of_measurement: "L/min"
+    icon: "mdi:water-sync"
+    use_pcnt: false
+    internal_filter: 500ms
+    update_interval: 10s
+    total:
+      device_class: water
+      name: "M1 Water Pulses"
+      unit_of_measurement: "L"
+      icon: "mdi:water-outline"
+
+  # Water Meter 2 (on GPIO 18)
+  - platform: pulse_counter
+    pin: 
+      number: GPIO18
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "M2 Water Flow Rate"
+    unit_of_measurement: "L/min"
+    icon: "mdi:water-sync"
+    use_pcnt: false
+    internal_filter: 500ms
+    update_interval: 10s
+    total:
+      device_class: water
+      name: "M2 Water Pulses"
+      unit_of_measurement: "L"
+      icon: "mdi:water-outline"
+
+binary_sensor:
+  # Leak Sensor (on GPIO 21)
+  - platform: gpio
+    pin:
+      number: GPIO21
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "Water Leak Sensor"
+    device_class: moisture
+
+# Example configuration entry
+button:
+  - platform: factory_reset
+    name: Restart with Factory Default Settings

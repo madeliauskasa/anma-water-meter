@@ -66,3 +66,5 @@ Kadangi **ANMA vandens skaitiklis** pradeda skaičiuoti nuo nulio, turite jį si
 
 ## ⚠️ Atsakomybės apribojimas
 *Tai yra mėgėjiškas „pasidaryk pats“ (DIY) įrenginis, skirtas informaciniams tikslams. Tai nėra sertifikuotas gyvybės saugos ar oficialus apsaugos nuo užliejimo prietaisas. Kūrėjas neatsako už jokią žalą vandeniu ar duomenų praradimą.*
+
+**DI atskleidimas:** *Dalis šio projekto dokumentacijos ir kodo buvo sugeneruota arba optimizuota naudojant didelius kalbos modelius (LLM). Visada rankiniu būdu patikrinkite kritinius nustatymus.*

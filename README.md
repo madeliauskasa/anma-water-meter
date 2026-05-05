@@ -68,3 +68,5 @@ Since the **ANMA Water Meter** starts counting from zero, you must synchronize i
 
 ## ⚠️ Disclaimer
 *This is a DIY hobbyist device for informational purposes. It is not a certified life-safety or flood-prevention device. The developer is not responsible for any water damage or data loss.*
+
+**AI Disclosure:** *Portions of the documentation and code for this project were generated or optimized using Large Language Models (LLMs). Always verify critical settings manually.*
